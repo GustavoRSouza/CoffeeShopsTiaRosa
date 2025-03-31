@@ -31,11 +31,9 @@ function createTestimonialSlides() {
     const container = document.getElementById('testimonials-container');
     container.innerHTML = '';
 
-    // Criar wrapper para os slides
     const slidesWrapper = document.createElement('div');
     slidesWrapper.className = 'testimonials-wrapper';
 
-    // Criar slides
     testimonials.forEach((testimonial, index) => {
         const slide = document.createElement('div');
         slide.className = `testimonial-slide ${index === 0 ? 'active' : ''}`;

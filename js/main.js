@@ -1,4 +1,3 @@
-// Menu Items Data
 const menuData = {
     'cafes-especiais': [
         {
@@ -53,7 +52,7 @@ const menuData = {
     ]
 };
 
-// Populate Menu Items
+
 Object.keys(menuData).forEach(category => {
     const container = document.getElementById(category);
     if (container) {
@@ -70,7 +69,6 @@ Object.keys(menuData).forEach(category => {
     }
 });
 
-// Mobile Navigation
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -80,7 +78,6 @@ if (menuToggle && navLinks) {
         menuToggle.classList.toggle('active');
     });
 
-    // Close menu when clicking on a link
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
@@ -89,12 +86,10 @@ if (menuToggle && navLinks) {
     });
 }
 
-// Contact Form Handling
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Here you would typically handle form submission
         alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
         contactForm.reset();
     });

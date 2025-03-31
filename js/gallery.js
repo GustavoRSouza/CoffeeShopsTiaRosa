@@ -1,4 +1,3 @@
-// Dados da galeria com imagens de cafeterias
 const galleryData = [
     {
         id: 1,
@@ -74,7 +73,7 @@ const galleryData = [
     }
 ];
 
-// Função para criar elementos da galeria
+
 function createGalleryItem(item) {
     const galleryItem = document.createElement('div');
     galleryItem.className = 'gallery-item';
@@ -101,7 +100,6 @@ function createGalleryItem(item) {
     return galleryItem;
 }
 
-// Função para inicializar a galeria
 function initGallery() {
     const galleryContainer = document.getElementById('gallery-container');
     if (!galleryContainer) return;
@@ -112,5 +110,4 @@ function initGallery() {
     });
 }
 
-// Inicializar quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', initGallery);

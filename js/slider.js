@@ -32,10 +32,8 @@ class Slider {
         this.slides = document.querySelectorAll('.slide');
         this.dots = document.querySelectorAll('.slider-dot');
 
-        // Iniciar com o primeiro slide ativo
         this.showSlide(0);
 
-        // Adicionar event listeners
         document.querySelector('.slider-arrow.prev').addEventListener('click', () => this.prevSlide());
         document.querySelector('.slider-arrow.next').addEventListener('click', () => this.nextSlide());
 
@@ -43,10 +41,8 @@ class Slider {
             dot.addEventListener('click', () => this.showSlide(index));
         });
 
-        // Iniciar autoplay
         this.startAutoPlay();
 
-        // Pausar autoplay quando o mouse estiver sobre o slider
         heroSection.addEventListener('mouseenter', () => this.stopAutoPlay());
         heroSection.addEventListener('mouseleave', () => this.startAutoPlay());
     }
@@ -107,7 +103,6 @@ class Slider {
     }
 }
 
-// Inicializar o slider quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', () => {
     new Slider();
 });
